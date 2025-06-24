@@ -7,32 +7,24 @@
 :root {
   /* font size */
   --fs-b: 14px;
-  /* custom colors */
-  --smartRed: hsla(346, 61%, 29%, 1.0);
-  --smartBlue: hsla(217, 67%, 21%, 1.0);
-  --smartGreen: hsla(170, 100%, 16%, 1.0);
-  --smartYellow: hsla(37, 35%, 50%, 1.0);
-  /* custom mono */
-  --smartRedMono: hsla(346, 30%, 41%, 1.0);
-  --smartBlueMono: hsla(217, 33%, 32%, 1.0);
-  --smartGreenMono: hsla(172, 50%, 29%, 1.0);
-  --smartYellowMono: hsla(37, 25%, 60%, 1.0);
-  /* custom mono UP */
-  --smartRedMonoUp: hsla(346, 90%, 19%, 1.0);
-  --smartBlueMonoUp: hsla(217, 94%, 12%, 1.0);
-  --smartGreenMonoUp: hsla(172, 100%, 29%, 1.0);
-  --smartYellowMonoUp: hsla(37, 45%, 40%, 1.0);
+  
   /* theme colors */
-  --background: hsla(0, 0%, 96%, 1.0);
-  --backgroundMono: hsla(0, 0%, 90%, 1.0);
-  --text: hsla(0, 0%, 0%, 1.0);
-  --primary: hsla(37, 35%, 50%, 1.0);
+  --background: hsla(0, 7%, 8%,1.0);
+  --backgroundMono: hsla(8, 5%, 30%, 1.0);
+
+  --text: hsla(0, 0%, 85%, 1.0);
+
+  --primary: hsla(146, 69%, 16%,1.0);
+  --primaryMonoDark: hsla(146, 77%, 9%,1.0);
+  --primaryMonoLight: hsla(146, 58%, 43%,1.0);
+
+  --contrast: hsla(37, 64%, 30%, 1.0);
+  --contrastMono: hsla(37, 30%, 60%, 1.0);
 
   --navHeight: 14vh;
   --navMenu-height: 5rem;
-  --cardBackgroundColor: hsla(0, 4%, 91%, 1.0);
-  --cardBackgroundColorGold: hsla(37, 28%, 81%, 1.0);
-   --cardCurve: 15px;
+  --cardCurve: 15px;
+  --innerCardCurve: 10px;
 }
 
 /* tablet up */
@@ -343,7 +335,7 @@ a {
 hr {
 border: none;
 height: 2px;
-background-color: rgb(194, 189, 189);
+background-color: var(--text);
 border-radius: 5px;
 
 }
