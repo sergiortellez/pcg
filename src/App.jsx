@@ -3,38 +3,35 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+//Router
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+//Pages
+import Home from './pages/home/Home'
+import Info from './pages/info/Info'
+import Partners from './pages/partners/Partners'
+import Practice from './pages/practice/Practice'
+import Profile from './pages/profile/Profile'
 
 
-//fontawesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGrid2, faCalendar, faLocationDot, faHouse } from '@awesome.me/kit-698a354a60/icons/classic/solid'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React <FontAwesomeIcon icon={faCalendar} />
-      </h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Routes>
+          {/*Pages  */}
+          <Route path="/" element={<Home />} />
+          <Route path="/info" element={<Info />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/practice" element={<Practice />} />
+          <Route path="/profile" element={<Profile />} />
+          {/* aux */}
+          <Route path="*" element={<h1>404 Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
