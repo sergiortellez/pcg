@@ -3,6 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+
+
+//fontawesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGrid2, faCalendar, faLocationDot, faHouse } from '@awesome.me/kit-698a354a60/icons/classic/solid'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,7 +22,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Vite + React <FontAwesomeIcon icon={faCalendar} />
+      </h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
