@@ -4,8 +4,44 @@
 /*...................................................*/
 /*###################################################*/
 
+.privacyNotice{
+    padding: 1rem;
+    color: var(--backgroundMono);
+    padding-bottom: 5rem;
+}
 
+.privacyNotice p{
+    font-size: 0.8rem;
+    text-align: justify;
+}
 
+.privacyNotice li{
+    font-size: 0.8rem;
+    text-align: justify;
+}
+.directory{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:0 1rem ;
+    gap: 2rem;
+}
+
+.directory article{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(128, 128, 128, 0.348);
+    padding: 0.7rem;    
+    width: 100%;
+    border-radius: var(--innerCardCurve);
+}
+.directory article h3{
+    font-size: 1.2rem;
+}
+.directory article div{
+    display: flex;
+    gap: 0.5rem;
+}
 /*###################################################*/
 /*...................................................*/
 /* end Info(component) */
