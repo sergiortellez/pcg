@@ -4,10 +4,13 @@
 * Description:
      This component renders the top bar of the application, which includes the title and a button to switch languages.
 * Parameters:
-    - 
+    - overrideTitle: Optional string to override the default title.
+    - overrideTranslate: Optional boolean to override the default behavior of showing the translate button.
 * Dependencies:
-    -
+    - useLocation: Hook from react-router-dom to get the current location.
+ 
 * Returns/results:
+    - A header element containing the title and a button to switch languages if applicable.
     
 <!------------------------------------------------->*/
 
@@ -29,9 +32,12 @@ const routeConfig = {
 export default function TopBar({ overrideTitle, overrideTranslate }) {
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  const cfg = routeConfig[pathname] || {};
-  const title = overrideTitle ?? cfg.title ?? "";
-  const showTranslate = overrideTranslate !== false && cfg.showTranslate;
+  // Get the configuration for the current route, or an empty object if not found (using bracket notation)
+  const configuration = routeConfig[pathname] || {};
+  //if overrideTitle is provided, use it, otherwise use the title from the configuration otherwise an empty string
+  const title = overrideTitle ?? configuration.title ?? "";
+  //if theres no overrideTranslate and the configuration has showTranslate set to true, then showTranslate is true
+  const showTranslate = overrideTranslate !== false && configuration.showTranslate;
   return (
     <>
       <header className={styles.topBar}>
