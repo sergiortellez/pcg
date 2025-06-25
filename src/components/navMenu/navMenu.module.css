@@ -7,15 +7,15 @@
 
 nav[data-type="mobile"] {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 1000;
-    background-color: var(--background);
+    background-color: var(--backgroundMono);
     padding: 0;
-    color: var(--smartBlue);
-    border-top: solid 1px var(--background-mono);
+    color: var(--text);
+    border-top: solid 3px var(--contrast);
     min-height: var(--navMenu-height);
   }
   
@@ -55,41 +55,7 @@ nav[data-type="mobile"] {
   /*-------------------------------*/
   
   
-  /*-------------------------------*/
-  /* hamburger & animation */
-  /*-------------------------------*/
   
-  
-  .hamburger { 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-     min-width: 3rem;
-   
-  }
-  
-  .hamburger > div{
-    width: 24px;
-    height: 2px;
-    background-color: var(--smartBlue);
-    transition: transform var(--animation-duration) ease;
-  }
-  
-  .hamburger.open > .line1 {
-    transform: rotate(45deg) translate(0px, 5px);
-  }
-  
-  .hamburger.open > .line2 {
-    transform: rotate(-45deg) translate(0px, -5px);
-  }
-  
-  
-  /*-------------------------------*/
-  /* end hamburger & animation */
-  /*-------------------------------*/
 
 
 /*###################################################*/

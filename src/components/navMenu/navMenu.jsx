@@ -20,20 +20,19 @@
 
 //---------------------imports----------------------
 //react
-import { useState, useRef } from 'react'
+
 import { NavLink } from 'react-router-dom'
-//for smooth scrolling
-import { HashLink } from "react-router-hash-link";
+
 
 //fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGrid2, faCalendar, faLocationDot, faHouse } from '@awesome.me/kit-698a354a60/icons/classic/solid'
+import { faHouse, faScaleBalanced, faUserTieHair, faCircleInfo, faIdBadge } from '@awesome.me/kit-698a354a60/icons/classic/solid'
 
 
 
 
 //styles
-import styles from './navMenu.module.css'
+import styles from './NavMenu.module.css'
 
 
 export default function navMenu() {
@@ -41,11 +40,26 @@ export default function navMenu() {
     <>
       {/* nav bar */}
       <nav data-type="mobile" className={styles.navMenu}>
-        <HashLink smooth to="/" className={styles.item} > <FontAwesomeIcon icon={faHouse} className={styles.icon} /> SMART </HashLink>
+        <NavLink to="/" className={styles.item} >
+          <FontAwesomeIcon icon={faHouse} className={styles.icon} /> Home
+        </NavLink>
 
-        <HashLink smooth to="/#experiencias" className={styles.item} > <FontAwesomeIcon icon={faGrid2} className={styles.icon} /> Experiencias </HashLink>
+        <NavLink to="/practice" className={styles.item} >
+          <FontAwesomeIcon icon={faScaleBalanced} className={styles.icon} /> Practice
+        </NavLink>
 
-        <NavLink to="/citas" className={styles.item} > <FontAwesomeIcon icon={faCalendar} className={styles.icon} /> Citas </NavLink>
+        <NavLink to="/partners" className={styles.item} >
+          <FontAwesomeIcon icon={faUserTieHair} className={styles.icon} /> Partners
+        </NavLink>
+
+        <NavLink to="/info" className={styles.item} >
+          <FontAwesomeIcon icon={faCircleInfo} className={styles.icon} /> Info
+        </NavLink>
+
+        <NavLink to="/profile" className={styles.item} >
+          <FontAwesomeIcon icon={faIdBadge} className={styles.icon} /> Profile
+        </NavLink>
+
 
       </nav >
     </>

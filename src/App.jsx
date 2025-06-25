@@ -1,10 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 //Router
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+//components
+import NavMenu from './components/NavMenu/NavMenu'
+import NavBar from './components/NavBar/NavBar'
+
 
 //Pages
 import Home from './pages/home/Home'
@@ -16,11 +19,27 @@ import Profile from './pages/profile/Profile'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  //is the app running on a mobile browser?
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767.98 && /Mobi|Android/i.test(navigator.userAgent))
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 767.98 && /Mobi|Android/i.test(navigator.userAgent));
+  };
+
+  //is necessary to check the size of the window on resize
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <>
       <BrowserRouter>
+        {!isMobile && <NavBar />}
         <Routes>
           {/*Pages  */}
           <Route path="/" element={<Home />} />
@@ -31,7 +50,9 @@ function App() {
           {/* aux */}
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
+        {isMobile && <NavMenu />}
       </BrowserRouter>
+
     </>
   )
 }
