@@ -20,7 +20,9 @@ import styles from './Profile.module.css'
 export default function Profile() {
   return (
     <>
-      <h1>This is profile.</h1>
+      <section className={styles.container}>
+        <p>Discretion is everything. This section will be unveiled shortly...</p>
+      </section>
     </>
   );
 }

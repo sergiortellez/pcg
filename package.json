@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "echo 'test.thepowellcg.com' > dist/CNAME && touch dist/.nojekyll",
     "lint": "eslint .",
     "preview": "vite preview",
     "dev-network": "./dev-network.sh",
