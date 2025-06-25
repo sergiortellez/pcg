@@ -1,0 +1,104 @@
+/*###################################################*/
+/*...................................................*/
+/* BioCard(component) */
+/*...................................................*/
+/*###################################################*/
+.card {
+    background: var(--text);
+    color: var(--background);
+    border-radius: var(--cardCurve);
+    /* overflow: hidden; */
+    cursor: pointer;
+    display: flex;
+    /* flex-direction: column; */
+    box-shadow: 0 2px 8px rgba(249, 243, 243, 0.1);
+    transition: transform 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+  }
+  .photo {
+    width: 40%;
+    object-fit: cover;
+    border-bottom-left-radius: var(--cardCurve);
+    border-top-left-radius: var(--cardCurve);
+
+}
+  .info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+  }
+  .name {
+    margin: 0;
+    font-size: 01rem;
+  }
+
+  .position{
+    font-size: 0.8rem;
+  }
+  .summary {
+    margin: 0.5rem 0;
+    line-height: 1.4;
+    /* max-height: 3rem; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.7rem;
+  }
+  .button {
+    background: none;
+    color: var(--background);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    text-align: right;
+
+
+  }
+  .dialog {
+    border: none;
+    border-radius: var(--cardCurve);
+    padding: 0;
+    width: 96vw;
+    background: var(--text);
+    color: var(--background);
+    height: 90vh;
+  }
+  .dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+  }
+  .dialogContent {
+    position: relative;
+    padding: 1.5rem;
+  }
+  .close {
+    position: relative;
+    top: -1rem;
+    left: 95%;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--background);
+  }
+  .dialogTitle {
+    margin-top: 0;
+  }
+  .dialogBio {
+    margin-top: 1rem;
+    line-height: 1.6;
+    
+    overflow-y: auto;
+  }
+
+
+/*###################################################*/
+/*...................................................*/
+/* end BioCard(component) */
+/*...................................................*/
+/*###################################################*/

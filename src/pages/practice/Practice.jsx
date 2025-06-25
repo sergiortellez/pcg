@@ -16,11 +16,29 @@
 //styles
 import styles from './Practice.module.css'
 
+//components
+import AccordionButton from '../../components/AccordionButton/AccordionButton.jsx';
+
+//data
+import { PracticeData } from './PracticeData.jsx';
+
+
 
 export default function Practice() {
+
   return (
     <>
-      <h1>This is Practice</h1>
+      <section className={styles.container}>
+
+        {PracticeData.map(({ title, content, lang }) => (
+          <AccordionButton
+            key={title + lang}
+            title={title}
+            content={content}
+          />
+        ))}
+
+      </section>
     </>
   );
 }

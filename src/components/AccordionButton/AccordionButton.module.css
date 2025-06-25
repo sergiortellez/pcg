@@ -1,0 +1,65 @@
+/*###################################################*/
+/*...................................................*/
+/* AccordionButton(component) */
+/*...................................................*/
+/*###################################################*/
+
+.container {
+    background: var(--backgroundMono);
+    border-radius: var(--innerCardCurve);
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  
+  /* Header (botón) */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    background: var(--primaryMonoDark);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .title {
+    color: var(--text);
+    font-size: 1rem;
+  }
+  
+  .icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    color: var(--text);
+    font-size: 1.2rem;
+  }
+  
+  .iconOpen {
+    transform: rotate(180deg);
+  }
+  
+  /* Panel de contenido */
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .contentOpen {
+    max-height: 100vh; /* suficientemente grande para tu contenido */
+  }
+  
+  .contentInner {
+    padding: 1rem;
+    background: var(--primaryMonoDark);
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+/*###################################################*/
+/*...................................................*/
+/* end AccordionButton(component) */
+/*...................................................*/
+/*###################################################*/
