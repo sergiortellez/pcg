@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 //components
 import NavMenu from './components/NavMenu/NavMenu'
 import NavBar from './components/NavBar/NavBar'
+import TopBar from './components/TopBar/TopBar'
 
 
 //Pages
@@ -40,6 +41,7 @@ function App() {
     <>
       <BrowserRouter>
         {!isMobile && <NavBar />}
+        {isMobile && <TopBar />}
         <Routes>
           {/*Pages  */}
           <Route path="/" element={<Home />} />
