@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 //Router
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter as BrowserRouter, Route, Routes } from 'react-router-dom'
 
 //components
 import NavMenu from './components/NavMenu/NavMenu'
