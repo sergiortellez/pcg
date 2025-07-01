@@ -18,36 +18,27 @@
 import { useLocation, useNavigate } from "react-router-dom";
 //styles
 import styles from './TopBar.module.css'
+//FontAwesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faIdBadge } from '@awesome.me/kit-698a354a60/icons/classic/solid'
 
-//Let's use the location to get the current route, keep results in an object.
-const routeConfig = {
-  "/": { title: "The Powell Continental Group", showTranslate: true },
-  "/practice": { title: "Areas of practice", showTranslate: true },
-  "/partners": { title: "Our Partners", showTranslate: true },
-  "/info": { title: "Info", showTranslate: true },
-  "/profile": { title: "My profile", showTranslate: true },
-};
+//logo
+import logo from '../../assets/images/logos/pcg_logo_short.webp';
 
 
-export default function TopBar({ overrideTitle, overrideTranslate }) {
-  const { pathname } = useLocation();
+export default function TopBar({ overrideTranslate }) {
+
   const navigate = useNavigate();
-  // Get the configuration for the current route, or an empty object if not found (using bracket notation)
-  const configuration = routeConfig[pathname] || {};
-  //if overrideTitle is provided, use it, otherwise use the title from the configuration otherwise an empty string
-  const title = overrideTitle ?? configuration.title ?? "";
-  //if theres no overrideTranslate and the configuration has showTranslate set to true, then showTranslate is true
-  const showTranslate = overrideTranslate !== false && configuration.showTranslate;
+
+
   return (
     <>
       <header className={styles.topBar}>
 
-
-        <h1 className={styles.title}>
-          {title}
-        </h1>
-
-        {showTranslate && (
+        <div className={styles.brand}>
+          <img src={logo} alt="PCG" />
+        </div>
+        <div className={styles.controls}>
           <button
             // TODO: add a function to change the language
             onClick={() => navigate("/")}
@@ -56,7 +47,17 @@ export default function TopBar({ overrideTitle, overrideTranslate }) {
           >
             EN
           </button>
-        )}
+          <button
+            // TODO: add a function to change the language
+            onClick={() => navigate("/profile")}
+            aria-label="Open the page Profile"
+            className={styles.translateButton}
+          >
+            <FontAwesomeIcon icon={faIdBadge} />
+          </button>
+        </div>
+
+
 
 
       </header>

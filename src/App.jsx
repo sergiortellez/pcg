@@ -15,6 +15,7 @@ import Home from './pages/home/Home'
 import Info from './pages/info/Info'
 import Partners from './pages/partners/Partners'
 import Practice from './pages/practice/Practice'
+import Key from './pages/key/Key'
 import Profile from './pages/profile/Profile'
 
 
@@ -45,10 +46,11 @@ function App() {
         <Routes>
           {/*Pages  */}
           <Route path="/" element={<Home />} />
-          <Route path="/pcg" element={<Home />} />
-          <Route path="/info" element={<Info />} />
-          <Route path="/partners" element={<Partners />} />
+          <Route path="/ethos" element={<Home />} />
           <Route path="/practice" element={<Practice />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/info" element={<Info />} />
+          <Route path="/key" element={<Key />} />
           <Route path="/profile" element={<Profile />} />
           {/* aux */}
           <Route path="*" element={<h1>404 Not Found</h1>} />

@@ -6,29 +6,41 @@
 
 .topBar {
     /* background: linear-gradient(180deg, #B89E30 0%, #8C6F12 100%); */
-    background-color: var(--contrast);
+    background: var(--background);
     height: 56;
     display: flex;
-    align-items: space-between;
+    justify-content: space-between;
     padding: 0.5rem;
     color: var(--text);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
-.title{
-    flex: 1;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: left;
+
+.brand img{
+    height: 2rem;
+    width: auto;
+    margin-left: 0.5rem;
+    opacity: 0.4;
+}
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
-.translateButton {
+.controls > button {
     border: none;
     background: transparent;
     color: inherit;
-    font-size: 1rem;
-    cursor: "pointer";
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text);
+    
+}
+
+.controls > button:hover {
+    color: var(--contrast);
 }
 /*###################################################*/
 /*...................................................*/

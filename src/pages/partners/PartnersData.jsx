@@ -1,6 +1,6 @@
 
 // import photos
-import jjpowell from '../../assets/partners/jjpowell.webp';
+import jjpowell from '../../assets/images/partners/jjpowell.webp';
 // import jorgemartinezylopez from '../../assets/partners/jorgemartinezylopez.webp';
 // import gabrielcorderocasasola from '../../assets/partners/gabrielcorderocasasola.webp';
 

@@ -26,7 +26,7 @@ import { NavLink } from 'react-router-dom'
 
 //fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse, faScaleBalanced, faUserTieHair, faCircleInfo, faIdBadge } from '@awesome.me/kit-698a354a60/icons/classic/solid'
+import { faPenNib, faScaleBalanced, faUsers, faCircleInfo, faLockKeyhole } from '@awesome.me/kit-698a354a60/icons/classic/solid'
 
 
 
@@ -41,7 +41,7 @@ export default function navMenu() {
       {/* nav bar */}
       <nav data-type="mobile" className={styles.navMenu}>
         <NavLink to="/" className={styles.item} >
-          <FontAwesomeIcon icon={faHouse} className={styles.icon} /> Home
+          <FontAwesomeIcon icon={faPenNib} className={styles.icon} /> Ethos
         </NavLink>
 
         <NavLink to="/practice" className={styles.item} >
@@ -49,16 +49,20 @@ export default function navMenu() {
         </NavLink>
 
         <NavLink to="/partners" className={styles.item} >
-          <FontAwesomeIcon icon={faUserTieHair} className={styles.icon} /> Partners
+          <FontAwesomeIcon icon={faUsers} className={styles.icon} /> The Group
         </NavLink>
 
         <NavLink to="/info" className={styles.item} >
           <FontAwesomeIcon icon={faCircleInfo} className={styles.icon} /> Info
         </NavLink>
-
-        <NavLink to="/profile" className={styles.item} >
-          <FontAwesomeIcon icon={faIdBadge} className={styles.icon} /> Profile
+        <NavLink to="/key" className={styles.item} >
+          <FontAwesomeIcon icon={faLockKeyhole} className={styles.icon} /> Exclusive
         </NavLink>
+
+
+        {/* <NavLink to="/profile" className={styles.item} >
+          <FontAwesomeIcon icon={faIdBadge} className={styles.icon} /> Profile
+        </NavLink> */}
 
 
       </nav >
