@@ -1,8 +1,11 @@
 
 // import photos
-import jjpowell from '../../assets/images/partners/jjpowell.webp';
-// import jorgemartinezylopez from '../../assets/partners/jorgemartinezylopez.webp';
-// import gabrielcorderocasasola from '../../assets/partners/gabrielcorderocasasola.webp';
+import jjpowell from '../../assets/images/partners/jj.webp';
+import jorgeMartinez from '../../assets/images/partners/jorge.webp';
+import gabrielCordero from '../../assets/images/partners/gabriel.webp';
+import aleshAncira from '../../assets/images/partners/alesh.webp';
+import hectorGomez from '../../assets/images/partners/hector.webp';
+import liliBenitez from '../../assets/images/partners/lili.webp';
 
 export const PartnersData = [
 
@@ -27,7 +30,7 @@ export const PartnersData = [
     <!-- Jorge Martínez y López   -->
     <!------------------------------------------------->*/
     {
-        photoSrc: jjpowell,
+        photoSrc: jorgeMartinez,
         name: 'Jorge Martínez y López',
         position: 'Partner',
         summary: 'Corporate lawyer specializing in mergers and acquisitions, venture capital and entertainment, experienced in high-profile deals and media-for-equity investments.',
@@ -42,13 +45,59 @@ export const PartnersData = [
     <!-- Gabriel Cordero Casasola   -->
     <!------------------------------------------------->*/
     {
-        photoSrc: jjpowell,
+        photoSrc: gabrielCordero,
         name: 'Gabriel Cordero Casasola',
         position: 'Partner',
         summary: 'Administrative law specialist and litigator with over 15 years of experience in public and private sectors, recognized for strategic counsel in administrative, civil and commercial matters.',
         fullBio: [
             'Gabriel Cordero Casasola is a lawyer with a solid academic background from the Universidad Nacional Autónoma de México, where he earned his bachelor’s, specialty and master’s degrees, and is currently pursuing his PhD in law. He has more than 15 years of professional experience as a litigator and consultant in administrative, civil, commercial and contentious matters at both local and federal levels.',
             'He has held key positions in the public sector, such as Director of Contentious Affairs at the Mexican Tourism Promotion Council and Legal Director at Futuro México, where he designed legal strategies, coordinated legal teams and represented institutions before jurisdictional authorities. His practice is distinguished by his technical mastery of administrative law, public procurement and judicial proceedings, combining strategic vision with rigorous and ethical legal execution.'
+        ],
+        lang: 'EN'
+    },
+
+    /*<------------------------------------------------->
+<!-- Alesh Ancira   -->
+<!------------------------------------------------->*/
+    {
+        photoSrc: aleshAncira,
+        name: 'Alesh Ancira',
+        position: 'Public Perception Expert & AI Strategist',
+        summary: 'Mexican-born public perception expert and AI Strategist with over a decade of experience advising global clients on long-term visibility, positioning, and reputation architecture across Latin America, the United Arab Emirates, North America, and Europe, focusing on integrating communication strategy and emerging technologies.',
+        fullBio: [
+            'Alesh Ancira is a Mexican-born public perception expert and AI Strategist with over a decade of experience advising global clients on long-term visibility, positioning, and reputation architecture. His work spans Latin America, the United Arab Emirates, North America, and Europe, focusing on integrating communication strategy and emerging technologies.',
+            'Educated in the United States, his academic background includes executive-level studies through Harvard University and the Wharton School of the University of Pennsylvania.'
+        ],
+        lang: 'EN'
+    },
+
+    /*<------------------------------------------------->
+    <!-- Héctor Gómez   -->
+    <!------------------------------------------------->*/
+    {
+        photoSrc: hectorGomez,
+        name: 'Héctor Gómez',
+        position: 'Global Corporate Executive & Entrepreneur',
+        summary: 'Global corporate executive and entrepreneur with over 30 years of experience, including 24 years at Procter & Gamble leading marketing, media commercial business and Latin America regional strategic purchases, with expertise in procurement, business strategy, logistics, AI and hospitality systems.',
+        fullBio: [
+            'Héctor Gómez has over 30 years of experience in the global corporate world and more than 11 years as an entrepreneur. He spent 24 years at Procter & Gamble, where he led the marketing and media commercial business as well as Latin America regional strategic purchases.',
+            'His areas of expertise include procurement, marketing, agency management, media and advertising production, business strategy, logistics, as well as emerging technologies such as AI, app development and hospitality systems.',
+            'He holds a bachelor’s degree in Industrial Engineering and completed a diploma in AI and machine learning from MIT.'
+        ],
+        lang: 'EN'
+    },
+
+    /*<------------------------------------------------->
+    <!-- Lili Benitez   -->
+    <!------------------------------------------------->*/
+    {
+        photoSrc: liliBenitez,
+        name: 'Lili Benitez',
+        position: 'Executive in Sales, Commerce & Communications',
+        summary: 'Executive with over 25 years of experience in sales, commerce, communications and public relations within hospitality, luxury networking platforms, travel and financial services industries, with expertise in customer service, product launches and strategic business development.',
+        fullBio: [
+            'Lili Benitez is an executive with more than 25 years of experience in sales, commerce, communications and public relations within the hospitality, luxury networking platforms, as well as travel and financial services industries. She has deep knowledge in customer service, sales operations, product launches and strategy development, focusing on brand growth and business plan implementation.',
+            'Lili holds a bachelor’s degree in Tourism Management and a master’s degree in International Management. She possesses skills in teamwork, negotiation, proactivity, strategic thinking, analysis, creativity and leadership of high-performance multidisciplinary teams. She is results-oriented and available to travel and relocate.'
         ],
         lang: 'EN'
     }
