@@ -30,33 +30,34 @@ export default function Info() {
           <h3>JJ Powell</h3>
           <div>
             <FontAwesomeIcon icon={faEnvelope} />
-            <span>jpowell@thepowellcg.com</span>
+            <span>jjpowell@thepowellcg.com</span>
           </div>
           <div>
             <FontAwesomeIcon icon={faPhone} />
-            <span>55 - 55 - 55 - 55</span>
+            <a href="tel:+1646363115">+1 (646) 369 3115</a>
+
           </div>
         </article>
         <article>
           <h3>Jorge Martínez y López</h3>
           <div>
             <FontAwesomeIcon icon={faEnvelope} />
-            <span>jmartinez@thepowellcg.com</span>
+            <span>jmartinezyl@thepowellcg.com</span>
           </div>
           <div>
             <FontAwesomeIcon icon={faPhone} />
-            <span>55 - 55 - 55 - 55</span>
+            <a href="tel:+525522994142">+52 (55) 2299 4142</a>
           </div>
         </article>
         <article>
           <h3>Gabriel Cordero Casasola</h3>
           <div>
             <FontAwesomeIcon icon={faEnvelope} />
-            <span>gcordero@thepowellcg.com</span>
+            <span>gccasasola@thepowellcg.com</span>
           </div>
           <div>
             <FontAwesomeIcon icon={faPhone} />
-            <span>55 - 55 - 55 - 55</span>
+            <a href="tel:+525513533146">+52 (55) 1353 3146</a>
           </div>
         </article>
       </section>

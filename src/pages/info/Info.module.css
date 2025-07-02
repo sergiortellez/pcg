@@ -27,6 +27,10 @@
     padding:0 1rem ;
     gap: 2rem;
 }
+.directory h1 i{
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
 
 .directory article{
     display: flex;
@@ -35,6 +39,7 @@
     padding: 0.7rem;    
     width: 100%;
     border-radius: var(--innerCardCurve);
+    gap: 0.5rem;
 }
 .directory article h3{
     font-size: 1.2rem;
@@ -43,6 +48,7 @@
     display: flex;
     gap: 0.5rem;
 }
+
 /*###################################################*/
 /*...................................................*/
 /* end Info(component) */
