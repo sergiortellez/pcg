@@ -4,16 +4,63 @@
 /*...................................................*/
 /*###################################################*/
 .homeLayout{
-
+  padding: 1rem;
 }
 /*-------------------------------*/
-/* video */
+/* ethos */
 /*-------------------------------*/
 
+.ethos {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+}
 
+.ethos p {
+  /* preserve your manual breaks */
+  white-space: pre-wrap;    
+  /* center lines if you like */
+  text-align: left;       
+  font-size: 0.7rem;
+  margin-top: 2rem;
 
+}
+
+.ethos .author {
+  display: block;
+  margin-top: 0.5rem;
+  text-align: right;
+}
+.fadeCircle{
+  position: relative;
+  display: inline-block;
+}
+
+.fadeCircle img{
+  display: block;
+  width: 12rem;
+  height: auto;    
+}
+
+.fadeCircle::after{
+
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* transparent in center → solid (or your bg) at edges */
+    background: radial-gradient(
+      ellipse 70% 70% at center,
+      rgba(255,255,255,0) 20%,   
+      var(--background) 70%    
+    );
+
+  
+}
 /*-------------------------------*/
-/* end video */
+/* end ethos */
 /*-------------------------------*/
 
 /*-------------------------------*/
@@ -21,8 +68,39 @@
 /*-------------------------------*/
 
 .description {
-  padding:1rem;
+  margin-bottom: var(--navHeight);
 }
+
+.description .fadeCircleFloated {
+  position: relative;
+  display: inline-block;
+  float: right;              
+  width: 13rem;           
+  margin: 0; 
+}
+
+.fadeCircleFloated img{
+  display: block;
+  width: 100%;
+  height: auto;    
+}
+
+.fadeCircleFloated::after{
+
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* transparent in center → solid (or your bg) at edges */
+    background: radial-gradient(
+      ellipse 70% 99% at center,
+      rgba(255,255,255,0) 20%,   
+      var(--background) 70%    
+    );
+
+  
+}
+
 .description p {
    text-align:justify;
 }
