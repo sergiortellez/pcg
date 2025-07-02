@@ -18,7 +18,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 1rem;
-    background: var(--primaryMonoDark);
+    background: var(--backgroundMono);
     border: none;
     cursor: pointer;
   }
@@ -52,7 +52,7 @@
   
   .contentInner {
     padding: 1rem;
-    background: var(--primaryMonoDark);
+    background: var(--backgroundMono);
     color: var(--text);
     font-size: 0.9rem;
     line-height: 1.4;
