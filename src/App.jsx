@@ -5,12 +5,12 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 //components
-import NavMenu from './components/NavMenu/NavMenu'
-import NavBar from './components/NavBar/NavBar'
-import TopBar from './components/TopBar/TopBar'
+import Layout from './components/Layout/Layout'
+
 
 
 //Pages
+import Login from './pages/login/Login'
 import Home from './pages/home/Home'
 import Info from './pages/info/Info'
 import Partners from './pages/partners/Partners'
@@ -21,44 +21,26 @@ import Profile from './pages/profile/Profile'
 
 
 function App() {
-  //is the app running on a mobile browser?
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767.98 && /Mobi|Android/i.test(navigator.userAgent))
-
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 767.98 && /Mobi|Android/i.test(navigator.userAgent));
-  };
-
-  //is necessary to check the size of the window on resize
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
-    <>
-      <BrowserRouter>
-        {!isMobile && <NavBar />}
-        {isMobile && <TopBar />}
-        <Routes>
-          {/*Pages  */}
-          <Route path="/" element={<Home />} />
+    <BrowserRouter>
+      <Routes>
+        {/* Ruta pública sin layout */}
+        <Route path="/" element={<Login />} />
+
+        {/* Rutas con layout */}
+        <Route element={<Layout />}>
           <Route path="/ethos" element={<Home />} />
           <Route path="/practice" element={<Practice />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/info" element={<Info />} />
           <Route path="/key" element={<Key />} />
           <Route path="/profile" element={<Profile />} />
-          {/* aux */}
-          <Route path="*" element={<h1>404 Not Found</h1>} />
-        </Routes>
-        {isMobile && <NavMenu />}
-      </BrowserRouter>
+        </Route>
 
-    </>
+        {/* 404 */}
+        <Route path="*" element={<h1>404 Not Found</h1>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
