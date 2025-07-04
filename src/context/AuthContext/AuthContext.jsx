@@ -33,6 +33,7 @@ export function AuthProvider({ children }) {
     const stored = localStorage.getItem('pcg-user');
     //si stored existe transfórmalo en algo legible y ponlo en context user. 
     if (stored) setUser(JSON.parse(stored));
+    navigate('/ethos', { replace: true });
   }, []);
 
   // Función de login
