@@ -12,8 +12,11 @@
 <!------------------------------------------------->*/
 
 //---------------------imports----------------------
+//react
+import { useState } from 'react';
 //components
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
+import SlideCard from '../../components/SlideCard/SlideCard';
 
 //styles
 import styles from './Login.module.css'
@@ -25,6 +28,9 @@ import logoPCG from '/images/pcg_logo_long.webp';
 
 
 export default function login() {
+
+  const [isApplyOpen, setIsApplyOpen] = useState(false);
+  const [isMembersOpen, setIsMembersOpen] = useState(false);
   return (
     <section className={styles.loginLayout}>
       <img src={logoPCG} alt="Powell Continental Group Logo" className={styles.logo} />
@@ -37,8 +43,30 @@ export default function login() {
       </figure>
 
 
-      <button className={styles.applyButton}>Apply for Membership</button>
-      <button className={styles.membersButton}>Members</button>
+      <button onClick={() => setIsApplyOpen(true)} className={styles.applyButton}>Apply for Membership</button>
+      <button onClick={() => setIsMembersOpen(true)} className={styles.membersButton}>Members</button>
+
+      {/* SlideCards */}
+
+      {/* Apply */}
+      <SlideCard
+        isOpen={isApplyOpen}
+        onClose={() => setIsApplyOpen(false)}
+        backgroundColor="hsla(146, 77%, 9%,1.0)"
+        color="hsla(0, 0%, 85%, 1.0)">
+        {/* add content */}
+        Apply
+      </SlideCard>
+
+      {/* members */}
+      <SlideCard
+        isOpen={isMembersOpen}
+        onClose={() => setIsMembersOpen(false)}
+        backgroundColor="hsla(146, 77%, 9%,1.0)"
+        color="hsla(0, 0%, 85%, 1.0)">
+        {/* add content */}
+        Members Only
+      </SlideCard>
     </section>
   );
 }

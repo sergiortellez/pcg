@@ -1,0 +1,124 @@
+/*###################################################*/
+/*...................................................*/
+/* SlideCard(component) */
+/*...................................................*/
+/*###################################################*/
+
+:root {
+  --animation-duration: 0.4s;
+}
+
+@keyframes slideInY {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+@keyframes slideOutY {
+  from { transform: translateY(0); }
+  to   { transform: translateY(100%); }
+}
+@keyframes slideInX {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes slideOutX {
+  from { transform: translateX(0); }
+  to   { transform: translateX(100%); }
+}
+
+/* — Estilos base — */
+.slideCard {
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  background: var(--slideCardBgColor, #fff);
+  color: var(--slideCardTextColor, #000);
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  width: 100vw;
+  max-inline-size: 100vw;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  transform: translateY(100%);
+}
+
+/* Backdrop semi-opaco */
+.slideCard::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Estado abierto */
+.slideCard[open] {
+  animation: slideInY var(--animation-duration) ease-in-out forwards;
+}
+
+/* Animación de cierre */
+.closing {
+  animation: slideOutY var(--animation-duration) ease-in-out forwards;
+}
+
+header.header{
+  flex: 0 0 auto;
+  background: var(--slideCardBgColor, #fff);
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+
+/* Botón de cierre (mobile) */
+.closeBtn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  color: var(--slideCardTextColor, #fff);
+}
+.closeBtn:focus {
+  outline: none;
+}
+
+
+.content {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 0 1rem;
+}
+
+/* — Desktop (≥768px) — */
+@media (min-width: 768px) {
+  .slideCard {
+    width: 30vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    transform: translateX(100%);
+    border-radius: 0;
+  }
+  .slideCard[open] {
+    animation: slideInX var(--animation-duration) ease-in-out forwards;
+  }
+  .closing {
+    animation: slideOutX var(--animation-duration) ease-in-out forwards;
+  }
+  /* Botón de cierre (desktop) */
+  .closeBtn {
+    left: 1rem;
+    right: auto;
+  }
+}
+
+/*###################################################*/
+/*...................................................*/
+/* end SlideCard(component) */
+/*...................................................*/
+/*###################################################*/
