@@ -12,7 +12,8 @@
     align-items: flex-end;
     background-image: url('/images/key.webp') ;
     background-size: cover;
-    background-position: top;
+    background-repeat: no-repeat;
+    background-position: center -4rem;
     padding-bottom: 5rem;
     overflow-y: hidden;
     
