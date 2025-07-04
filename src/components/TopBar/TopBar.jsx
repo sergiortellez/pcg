@@ -16,11 +16,12 @@
 
 //---------------------imports----------------------
 import { useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from '../../context/AuthContext/AuthContext';
 //styles
 import styles from './TopBar.module.css'
 //FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faIdBadge } from '@awesome.me/kit-698a354a60/icons/classic/solid'
+import { faIdBadge, faLeftFromBracket } from '@awesome.me/kit-698a354a60/icons/classic/solid'
 
 //logo
 import logo from '../../assets/images/logos/pcg_logo_short.webp';
@@ -29,6 +30,8 @@ import logo from '../../assets/images/logos/pcg_logo_short.webp';
 export default function TopBar({ overrideTranslate }) {
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const { logout } = useAuth();
 
 
   return (
@@ -47,14 +50,23 @@ export default function TopBar({ overrideTranslate }) {
           >
             EN
           </button>
-          <button
-            // TODO: add a function to change the language
-            onClick={() => navigate("/profile")}
-            aria-label="Open the page Profile"
-            className={styles.translateButton}
-          >
-            <FontAwesomeIcon icon={faIdBadge} />
-          </button>
+          {location.pathname === '/profile' ? (
+            <button
+              onClick={logout}
+              aria-label="Logout"
+              className={styles.logOutButton}
+            >
+              <FontAwesomeIcon icon={faLeftFromBracket} /> logout
+            </button>
+          ) : (
+            <button
+              onClick={() => navigate("/profile")}
+              aria-label="Open the page Profile"
+              className={styles.translateButton}
+            >
+              <FontAwesomeIcon icon={faIdBadge} />
+            </button>
+          )}
         </div>
 
 

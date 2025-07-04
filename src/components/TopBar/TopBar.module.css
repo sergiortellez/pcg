@@ -42,6 +42,13 @@
 .controls > button:hover {
     color: var(--contrast);
 }
+
+.logOutButton{
+    font-size: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
 /*###################################################*/
 /*...................................................*/
 /* end TopBar(component) */

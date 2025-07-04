@@ -1,0 +1,57 @@
+/*###################################################*/
+/*...................................................*/
+/* LoginForm(component) */
+/*...................................................*/
+/*###################################################*/
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    height: 100%;
+    margin: 2rem 0;
+}
+
+.errorText{
+    color: tomato;
+}
+
+.inputs{
+    all:unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.loginForm input{
+    all: unset;
+    width: 80%;
+    height: 2rem;
+    font-size: 1.3rem;
+    padding: 0.6rem;
+    background-color: hsla(147, 71%, 47%, 0.093);
+    color: gray;
+    border-radius: var(--cardCurve); 
+}
+
+.loginForm button{
+    all:unset;
+    background-color: var(--contrast);
+    color: var(--text);
+    font-size: 1.3rem;
+    border-radius: var(--innerCardCurve);
+    text-align: center; 
+    padding: 0.5rem;
+    min-width: 40%;
+}
+
+/*###################################################*/
+/*...................................................*/
+/* end LoginForm(component) */
+/*...................................................*/
+/*###################################################*/

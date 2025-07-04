@@ -4,8 +4,13 @@ import './App.css'
 //Router
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+//context
+import { AuthProvider } from './context/AuthContext/AuthContext'
+
 //components
 import Layout from './components/Layout/Layout'
+import RequireAuth from './components/RequireAuth/RequireAuth'
+
 
 
 
@@ -23,23 +28,31 @@ import Profile from './pages/profile/Profile'
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Ruta pública sin layout */}
-        <Route path="/" element={<Login />} />
+      <AuthProvider>
+        <Routes>
+          {/* Ruta pública sin layout */}
+          <Route path="/" element={<Login />} />
 
-        {/* Rutas con layout */}
-        <Route element={<Layout />}>
-          <Route path="/ethos" element={<Home />} />
-          <Route path="/practice" element={<Practice />} />
-          <Route path="/partners" element={<Partners />} />
-          <Route path="/info" element={<Info />} />
-          <Route path="/key" element={<Key />} />
-          <Route path="/profile" element={<Profile />} />
-        </Route>
+          {/* Rutas con layout y privadas */}
+          <Route
+            element={
+              <RequireAuth>
+                <Layout />
+              </RequireAuth>}>
 
-        {/* 404 */}
-        <Route path="*" element={<h1>404 Not Found</h1>} />
-      </Routes>
+            <Route path="/ethos" element={<Home />} />
+            <Route path="/practice" element={<Practice />} />
+            <Route path="/partners" element={<Partners />} />
+            <Route path="/info" element={<Info />} />
+            <Route path="/key" element={<Key />} />
+            <Route path="/profile" element={<Profile />} />
+
+          </Route>
+
+          {/* 404 */}
+          <Route path="*" element={<h1>404 Not Found</h1>} />
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   )
 }

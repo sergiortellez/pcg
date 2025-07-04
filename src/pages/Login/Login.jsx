@@ -17,6 +17,7 @@ import { useState } from 'react';
 //components
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import SlideCard from '../../components/SlideCard/SlideCard';
+import LoginForm from '../../components/LoginForm/LoginForm';
 
 //styles
 import styles from './Login.module.css'
@@ -65,7 +66,8 @@ export default function login() {
         backgroundColor="hsla(146, 77%, 9%,1.0)"
         color="hsla(0, 0%, 85%, 1.0)">
         {/* add content */}
-        Members Only
+        <h2 style={{ marginBottom: '1rem', color: 'white', textAlign: 'center' }}>Welcome Back</h2>
+        <LoginForm onClose={() => setIsMembersOpen(false)} />
       </SlideCard>
     </section>
   );

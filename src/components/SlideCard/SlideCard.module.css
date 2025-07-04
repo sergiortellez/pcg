@@ -28,7 +28,9 @@
 /* — Estilos base — */
 .slideCard {
   border: none;
-  border-radius: 8px;
+  border-top-left-radius: var(--cardCurve);
+  border-top-right-radius: var(--cardCurve);
+
   padding: 1rem;
   background: var(--slideCardBgColor, #fff);
   color: var(--slideCardTextColor, #000);
@@ -41,8 +43,10 @@
   max-inline-size: 100vw;
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  max-height: 80vh;
+  height: auto;
   transform: translateY(100%);
+  padding: 2rem 0;
 }
 
 /* Backdrop semi-opaco */

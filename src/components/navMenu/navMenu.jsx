@@ -40,7 +40,7 @@ export default function navMenu() {
     <>
       {/* nav bar */}
       <nav data-type="mobile" className={styles.navMenu}>
-        <NavLink to="/" className={styles.item} >
+        <NavLink to="/ethos" className={styles.item} >
           <FontAwesomeIcon icon={faPenNib} className={styles.icon} /> Ethos
         </NavLink>
 
