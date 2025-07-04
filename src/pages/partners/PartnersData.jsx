@@ -15,13 +15,14 @@ export const PartnersData = [
     {
         photoSrc: jjpowell,
         name: 'JJ Powell',
-        position: 'Founder & Partner',
+        position: 'CEO of The Powell Continental Group & Managing Partner',
         summary: 'Internationally qualified corporate lawyer, founder of PCG, renowned for excellence in complex global transactions with personalized client focus.',
         fullBio: [
-            'JJ Powell is an international lawyer primarily trained in corporate law and mergers and acquisitions. Having studied literature at the University of Oxford and then law at his alma mater, JJ went on to train at Slaughter & May in London working on some of the largest deals in the industry, including the British Airways and Iberia merger.',
-            'He was subsequently headhunted by a firm in Mexico City, Basham, Ringe y Correa, where he was made partner at the age of twenty-eight after re-validating his legal degree at the Universidad Nacional Autónoma de México. Since leaving his position at the firm, he has grown and expanded a boutique practice which has culminated in The Powell Continental Group, recently advising on cases including ExxonMobil’s acquisition of Pioneer Natural Resources.',
-            'JJ is qualified to practice law in England and Wales, Mexico, France and the states of New York, California and Florida.',
-            'When not practicing law, JJ can be found producing Tony award winning theatre on Broadway and also developing plays and musicals for the West End. JJ is enrolled to commence a remote doctorate in psychology at The University of Johns Hopkins in January 2026.'
+            'JJ Powell is an international lawyer primarily trained in corporate law and mergers and acquisitions. Having studied literature at the University of Oxford and then law at his alma mater, JJ went on to train at Slaughter & May in London working on some of the largest deals in the industry, including the British Airways and Iberia merger. He was subsequently headhunted by a firm in Mexico City, Basham, Ringe y Correa, where he was made partner at the age of twenty-eight after re-validating his legal degree at the Universidad Nacional Autónoma de Méxcio.',
+            'He is also adept at all corporate, commercial and real estate contracts and has over ten years of experience working with luxury brands across the globe.',
+            'Since leaving his position at Basham, he has grown and expanded a boutique practice which has culminated in The Powell Continental Group, recently advising on cases including ExxonMobil’s acquisition of Pioneer Natural Resources. He serves as lead counsel and negotiator on all of PCG’s M&A deals. JJ is qualified to practice law in England and Wales, Mexico, France and the states of New York, California and Florida.',
+            'When not practicing law, JJ can be found producing Tony award winning theatre on Broadway and also developing plays and musicals for the West End. JJ is enrolled to commence a remote doctorate in psychology at The University of John Hopkins in January 2026.',
+            'JJ is fluent in English, Spanish and French and speaks intermediate Italian. He has been featured in the following publications: Legal 500, Chambers & Partners, Forbes, Rolling Stone, Elle & Harpers Bazaar.'
         ],
         lang: 'EN'
     },
