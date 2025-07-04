@@ -24,9 +24,11 @@ export default function VideoPlayer({ videoFile, videoPoster }) {
       <video
         src={videoFile}
         controls
+        autoPlay
+        loop
+        muted
         width="100%"
         poster={videoPoster}
-        preload="metadata" // load only metadata initially
       >
         Sorry, your browser doesn’t support embedded videos.
       </video>
